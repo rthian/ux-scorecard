@@ -233,15 +233,15 @@ Re-evaluation of sample designs with v2.0 and v4.0:
 
 | Product Type | v1.0 Score | v2.0 Score | v4.0 Score | Change | Status |
 |--------------|-----------|-----------|------------|---------|--------|
-| **Business Onboarding (MSME)** | 3.4 (C+) | 2.5 (C) | 2.0 (C-) | **-1.4 (-41%)** | BLOCKED (3-line headers) |
-| **Consumer Lending (GX Cashloan)** | 3.6 (B) | 3.4 (C+) | 3.6 (B) | **±0 (0%)** | ✅ PASS (A+ copywriting) |
-| **Investment Dashboard (GXS Invest)** | 3.4 (C+) | 3.4 (C+) | 3.7 (B+) | **+0.3 (+9%)** | ✅ PASS (excellent) |
-| **Loyalty Rewards (R1)** | 3.8 (B) | 3.2 (C+) | 3.5 (B) | **-0.3 (-8%)** | ✅ PASS (good copy) |
+| **Business Onboarding (Project A)** | 3.4 (C+) | 2.5 (C) | 2.0 (C-) | **-1.4 (-41%)** | BLOCKED (3-line headers) |
+| **Consumer Lending (Project B)** | 3.6 (B) | 3.4 (C+) | 3.6 (B) | **±0 (0%)** | ✅ PASS (A+ copywriting) |
+| **Investment Dashboard (Project C)** | 3.4 (C+) | 3.4 (C+) | 3.7 (B+) | **+0.3 (+9%)** | ✅ PASS (excellent) |
+| **Loyalty Rewards (Project D)** | 3.8 (B) | 3.2 (C+) | 3.5 (B) | **-0.3 (-8%)** | ✅ PASS (good copy) |
 | **Web Homepage (2026)** | N/A | N/A | 3.8 (B+) | N/A | ✅ PASS (perfect clarity) |
 
 **Key Finding (v4.0):** 
-- Projects with **excellent copywriting** (GX Cashloan, Web 2026) score **higher** in v4.0
-- Projects with **poor copywriting** (MSME - 3-line headers) score **lower** in v4.0
+- Projects with **excellent copywriting** (Project B, Project E) score **higher** in v4.0
+- Projects with **poor copywriting** (Project A - 3-line headers) score **lower** in v4.0
 - v4.0 **rewards quality** and **penalizes violations** accurately
 
 **Learn more**: 
@@ -566,11 +566,11 @@ To improve the skill:
 - **Example-driven:** Before/after recommendations with real project examples
 
 **📊 Real Impact:**
-- MSME Onboarding: 2.5 → 2.0 (-0.5, 3-line headers penalty)
-- GX Cashloan: 3.4 → 3.6 (+0.2, A+ copywriting rewarded)
-- GXS Invest: 3.4 → 3.7 (+0.3, excellent information design)
-- Rewards R1: 3.2 → 3.5 (+0.3, energetic tone recognized)
-- Web 2026 Homepage: NEW → 3.8 (B+, perfect clarity)
+- Project A Onboarding: 2.5 → 2.0 (-0.5, 3-line headers penalty)
+- Project B: 3.4 → 3.6 (+0.2, A+ copywriting rewarded)
+- Project C: 3.4 → 3.7 (+0.3, excellent information design)
+- Project D: 3.2 → 3.5 (+0.3, energetic tone recognized)
+- Project E Homepage: NEW → 3.8 (B+, perfect clarity)
 
 **📚 Documentation:**
 - [UX_SCORECARD_v4_COPYWRITING_UPDATE.md](./UX_SCORECARD_v4_COPYWRITING_UPDATE.md) - Complete v4.0 copywriting guide
