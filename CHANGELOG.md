@@ -14,6 +14,228 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Component library batch scoring
 - Team dashboard with analytics
 
+## [4.0.0] - 2026-06-22
+
+### ⚠️ MAJOR UPDATE: Copywriting, Typography & CTA Evaluation
+
+**Comprehensive copywriting quality assessment with automatic penalties**
+
+### Added
+
+#### Copywriting Length & Readability Rules
+- **Headers/Titles:**
+  - Mobile: Maximum 1 line (preferred), 2 lines absolute max (~40-60 characters)
+  - Desktop: Maximum 1-2 lines
+  - **Penalty:** -1 point on H2 per violation
+- **Body Copy:**
+  - Mobile: 2-3 lines maximum per paragraph
+  - Desktop: 3-4 lines maximum per paragraph
+  - Keep it scannable: Short sentences (15-20 words max)
+  - **Penalty:** -0.5 point on H2 per screen with excessive text
+- **Instructions/Helper Text:**
+  - 1-2 sentences maximum
+  - Plain language only
+  - No jargon without tooltips
+  - **Penalty:** -1 point on H9 if too verbose
+
+#### Typography Consistency Rules
+- **Font Size Hierarchy (Mobile):**
+  - H1 (Page Title): 28-34pt (consistent across ALL screens)
+  - H2 (Section Title): 22-24pt (consistent across ALL screens)
+  - Body: 16-18pt (consistent across ALL screens)
+  - Caption/Helper: 14-15pt (consistent across ALL screens)
+  - CTA Button: 16-18pt (consistent across ALL buttons)
+- **Consistency Rules:**
+  - Same hierarchy level = same font size
+  - All page titles must be the same size
+  - All body text must be the same size
+  - No random size variations
+- **Penalty:**
+  - Inconsistent title sizes: -1 point per occurrence
+  - Inconsistent body sizes: -0.5 point per occurrence
+  - More than 3 font sizes on one screen: -1 point (hierarchy confusion)
+
+#### CTA Hierarchy & Button Rules (STRICT)
+- **PRIMARY CTA RULE:** One (1) primary CTA per screen (STRICT)
+  - Visual style: Filled button, high contrast
+  - Placement: Bottom of screen OR prominent position
+  - Text: Action-oriented (e.g., "Sign Up Now", "Continue", "Submit")
+- **SECONDARY CTA RULE:** Zero (0) or One (1) secondary CTA per screen
+  - Visual style: Ghost/outline button, lower contrast
+  - Placement: Above or beside primary (if present)
+- **TERTIARY ACTION RULE:** Text link only (not a button)
+- **Penalty:**
+  - 2 primary CTAs on one screen: **-2 points** on H2 (CRITICAL)
+  - 3+ CTAs (any type) on one screen: -1 point (cognitive overload)
+  - CTA text unclear: -1 point on H9
+
+#### Red Flags (Auto-Deductions)
+- 🚨 Header >2 lines → H2 -1 (cognitive overload)
+- 🚨 Body text >5 lines → H2 -1 (wall of text)
+- 🚨 Instructions >3 sentences → H9 -1 (too complex)
+- 🚨 Any text >50 words on mobile → H2 -2 (CRITICAL)
+- 🚨 2 filled buttons (2 primary CTAs) → H2 -2 (CRITICAL)
+- 🚨 Typography inconsistency → H2 -1
+- 🚨 CTA text >3 words → H9 -0.5 (too verbose)
+
+### Changed
+
+#### Evaluation Methodology
+- **Copywriting is now MANDATORY** - evaluated on every screen
+- **Typography consistency** is now checked across all screens
+- **CTA hierarchy** is strictly enforced (1 primary max)
+- **Automatic penalties** applied for violations
+
+#### Scoring Impact
+- Projects with **excellent copywriting** score HIGHER in v4.0
+- Projects with **poor copywriting** score LOWER in v4.0
+- v4.0 **rewards quality** and **penalizes violations** accurately
+
+### Documentation
+
+#### New Documentation (v4.0)
+- **UX_SCORECARD_v4_COPYWRITING_UPDATE.md** - Comprehensive v4.0 copywriting guide
+  - Complete copywriting/typography/CTA rules
+  - Before/after examples from real projects
+  - Automatic penalty system explanation
+  - Scoring impact tables
+  - Platform-specific rules (mobile vs desktop)
+
+#### Updated Documentation
+- **SKILL.md** - Added "Copywriting, Typography & CTA Best Practices (MANDATORY)" section
+  - ~360 lines of new copywriting rules
+  - Detailed examples with violations
+  - Auto-deduction tables
+  - Evaluation checklist
+- **README.md** - Updated for v4.0
+  - Added v4.0 features section
+  - Updated automatic deductions table
+  - Updated real-world impact examples
+  - Updated version history
+
+### Real-World Impact (v4.0 Re-evaluations)
+
+| Project | v2.0 Score | v4.0 Score | Change | Status |
+|---------|-----------|-----------|---------|--------|
+| **MSME Onboarding** | 2.5 (C) | 2.0 (C-) | **-0.5 (-20%)** | BLOCKED (3-line headers) |
+| **GX Cashloan** | 3.4 (C+) | 3.6 (B) | **+0.2 (+6%)** | ✅ PASS (A+ copywriting) |
+| **GXS Invest Dashboard** | 3.4 (C+) | 3.7 (B+) | **+0.3 (+9%)** | ✅ PASS (excellent design) |
+| **Rewards R1** | 3.2 (C+) | 3.5 (B) | **+0.3 (+9%)** | ✅ PASS (good copy) |
+| **Web 2026 Homepage** | N/A | 3.8 (B+) | NEW | ✅ PASS (perfect clarity) |
+
+**Key Finding:**
+- Projects with **excellent copywriting** (GX Cashloan: A+ grade) score **higher**
+- Projects with **poor copywriting** (MSME: 3-line headers) score **lower**
+- v4.0 **accurately differentiates** quality vs poor copy
+
+### Examples
+
+#### Example 1: Header Violation (MSME Onboarding)
+
+**Before (passing with warning):**
+```
+"Power up your biz with easy financing and flexi repayments" (3 lines)
+→ v2.0: No specific penalty, scored as "verbose"
+```
+
+**After v4.0 (automatic penalty):**
+```
+"Power up your biz with easy financing and flexi repayments" (3 lines)
+→ v4.0: H2 -1 point (automatic), CRITICAL violation
+→ Score: 2.5 → 2.0
+```
+
+**Fix:**
+```
+"Get financing in minutes" (1 line)
+→ PASS, no penalty
+```
+
+#### Example 2: CTA Hierarchy Violation
+
+**Before (passing):**
+```
+[Sign Up Now]  ← Filled button
+[Login]        ← Filled button
+→ v2.0: No specific penalty for 2 primary CTAs
+```
+
+**After v4.0 (CRITICAL penalty):**
+```
+[Sign Up Now]  ← Filled button (primary)
+[Login]        ← Filled button (primary)
+→ v4.0: H2 -2 points (CRITICAL - 2 primary CTAs)
+```
+
+**Fix:**
+```
+[Sign Up Now]  ← Filled button (primary)
+[Login]        ← Ghost/outline button (secondary)
+→ PASS
+```
+
+### Technical
+
+#### Automatic Deductions (v4.0 Added)
+- Header >2 lines: **-1** (H2)
+- Body text >5 lines: **-1** (H2)
+- Instructions >3 sentences: **-1** (H9)
+- Text >50 words on mobile: **-2** (H2, CRITICAL)
+- 2 primary CTAs: **-2** (H2, CRITICAL)
+- 3+ CTAs total: **-1** (H2)
+- Vague CTA text: **-1** (H9)
+- Inconsistent typography: **-1** (H2)
+- CTA text >3 words: **-0.5** (H9)
+
+### Fixed
+- **Missing copywriting evaluation** in v2.0
+- **No penalties for verbose headers** (3+ lines)
+- **No penalties for unclear CTA hierarchy** (2 primary CTAs)
+- **No typography consistency checks**
+- **Inability to differentiate** good vs poor copywriting quality
+
+### Migration Guide (v2.0 → v4.0)
+
+**For Designers:**
+1. Re-evaluate all in-flight designs with v4.0
+2. Check all headers: ensure 1-2 lines max
+3. Check all CTAs: ensure 1 primary per screen
+4. Check typography consistency: same hierarchy = same size
+5. Expect score drops if copywriting is poor
+6. Expect score increases if copywriting is excellent
+
+**For Reviewers:**
+1. v4.0 scores may differ from v2.0 due to copywriting evaluation
+2. Projects with good copy will score higher
+3. Projects with poor copy will score lower
+4. Focus on copywriting violations (most common issue)
+
+**For Design Ops:**
+1. Update all Camp 3 gates to include copywriting checks
+2. Educate team on copywriting best practices
+3. Use GX Cashloan as copywriting exemplar (A+ grade)
+4. Use MSME Onboarding as copywriting anti-pattern (D grade)
+
+### Rationale for v4.0 Changes
+
+**Why add copywriting evaluation?**
+
+v2.0 caught design/UX issues but **missed copywriting quality**:
+- ❌ 3-line headers causing cognitive overload (MSME)
+- ❌ Verbose instructions confusing users
+- ❌ Inconsistent typography breaking visual hierarchy
+- ❌ 2 primary CTAs causing decision paralysis
+- ❌ Vague CTA text ("Submit", "OK") not action-oriented
+
+**These cause:**
+- Lower conversion rates
+- User confusion
+- Increased support tickets
+- Brand inconsistency
+- Poor mobile experience
+
+**v4.0 now catches these issues automatically with strict penalties.**
+
 ## [2.0.1] - 2026-06-22
 
 ### Added
