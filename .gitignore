@@ -1,0 +1,79 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Thumbnails
+Thumbs.db
+
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Directories potentially created on remote AFP share
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Claude Code
+.claude/
+*.log
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+.cache/
+
+# Local environment
+.env
+.env.local
+secrets/
+
+# Build outputs (if any in future)
+dist/
+build/
+out/
+
+# Node modules (if adding automation later)
+node_modules/
+package-lock.json
+yarn.lock
+
+# Python (if adding automation later)
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+venv/
+env/
+
+# Test files
+test-results/
+screenshots/
+*.test.md
+
+# Personal notes (keep private)
+PRIVATE_NOTES.md
+TODO_PRIVATE.md
+
+# Proprietary/internal documents (do not commit)
+*.pdf
+*Playbook*.pdf
+00\ Product\ Design\ Regional\ Playbook*.pdf
+internal/
+proprietary/
