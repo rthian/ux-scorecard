@@ -193,12 +193,17 @@ cp /path/to/uxscorecard/SKILL.md ~/.claude/skills/ux-scorecard.md
 # Upload an image/PDF, then:
 "Review this design using /ux-scorecard for Camp 2"
 
-# Or with Figma URL:
-"/ux-scorecard https://figma.com/file/ABC123/payment-flow"
+# Or with Figma URL (full file):
+"/ux-scorecard https://figma.com/design/ABC123/payment-flow"
+
+# Specific Figma screens (RECOMMENDED for detailed feedback):
+"/ux-scorecard https://figma.com/design/ABC123?node-id=123-456,123-789"
 
 # With specific context:
 "/ux-scorecard [image] --camp=2 --focus='error prevention and trust indicators'"
 ```
+
+**💡 Pro Tip:** Provide specific screen URLs (Figma node-ids) for actionable feedback with exact screen references!
 
 ## 🎯 Use Cases
 

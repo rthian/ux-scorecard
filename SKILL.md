@@ -780,6 +780,102 @@ If you're scoring everything 3.5-4.5, you're being too lenient.
 - **Complement to user testing**: Use scorecard alongside real user research
 - **Err on the side of strictness**: It's easier to increase scores than decrease them
 
+## Specific Screen Identification (MANDATORY)
+
+### For Figma Files
+
+**ALWAYS include specific Figma links in findings:**
+
+```markdown
+❌ BAD (Generic):
+"Forms appear too dense with multiple fields"
+
+✅ GOOD (Specific):
+"Forms appear too dense with multiple fields
+📍 Screen: Business Details Form
+🔗 https://figma.com/design/ABC123?node-id=123-456"
+```
+
+**When evaluating Figma:**
+1. Use `get_metadata` to list all frames/screens
+2. Use `get_screenshot` for individual screens that have issues
+3. Include frame name + node-id link in every finding
+4. Format: `📍 Screen: [Frame Name] | 🔗 [Figma URL with node-id]`
+
+### For PDF Files
+
+**Reference page numbers and section names:**
+
+```markdown
+✅ "Trust indicators missing on loan application screens
+📍 Page 5-7: Application Flow Section"
+```
+
+### For Image Files
+
+**Reference filename and describe screen:**
+
+```markdown
+✅ "No save/exit button visible
+📍 File: payment_flow_step2.png - Payment confirmation screen"
+```
+
+### For Multiple Screens
+
+**List all affected screens:**
+
+```markdown
+✅ "Dense forms (>5 fields per screen) found on:
+📍 Screen 1: Business Registration | 🔗 [Figma link node-id=123-456]
+📍 Screen 2: Owner Details | 🔗 [Figma link node-id=123-789]  
+📍 Screen 3: Bank Account Setup | 🔗 [Figma link node-id=123-012]"
+```
+
+### Output Format with Screen References
+
+Every finding MUST include:
+
+```markdown
+### 🚨 H2: Simplicity & Clarity (Score: 2)
+
+**Issue:** Forms too dense with >5 fields per screen
+
+**Affected Screens:**
+📍 Business Details Form | 🔗 https://figma.com/design/ABC?node-id=20881-19607
+📍 Owner Information | 🔗 https://figma.com/design/ABC?node-id=20881-19608
+📍 Bank Account Setup | 🔗 https://figma.com/design/ABC?node-id=20881-19609
+
+**Impact:** Cognitive overload for busy MSME owners
+
+**Recommendation:**
+1. Break Business Details into 2 screens (max 3-5 fields each)
+2. Progressive disclosure for optional fields on Owner Information
+3. Auto-fill bank details from previous applications
+
+**Priority:** 🔴 HIGH
+```
+
+### When Screen Identification is Not Possible
+
+**If evaluating from overview only:**
+
+```markdown
+⚠️ **LIMITATION:** Evaluated from overview screenshot (68,454px wide).
+Cannot identify specific screens or read detailed content.
+
+**Recommendation:** For detailed evaluation:
+1. Provide interactive Figma prototype
+2. OR provide individual screen screenshots
+3. OR specify frames to evaluate (node-ids)
+
+**Current evaluation is HIGH-LEVEL ONLY.**
+```
+
+**This limitation MUST affect scores:**
+- Cannot read content = H2, H9, H10 capped at 2
+- Cannot identify specific screens = recommendations are generic
+- User must re-evaluate with specific screens for actionable feedback
+
 ## Skill Invocation
 
 ```bash
@@ -794,10 +890,13 @@ If you're scoring everything 3.5-4.5, you're being too lenient.
 
 # Comparison
 /ux-scorecard --compare [input1] [input2]
+
+# Specific Figma frames (RECOMMENDED)
+/ux-scorecard https://figma.com/design/ABC?node-id=123-456,123-789,123-012
 ```
 
 ---
 
-**Version**: 1.0  
-**Last Updated**: June 19, 2026  
+**Version**: 2.0  
+**Last Updated**: June 22, 2026  
 **Owner**: Regional Design Team

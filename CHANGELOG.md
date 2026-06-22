@@ -14,6 +14,60 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Component library batch scoring
 - Team dashboard with analytics
 
+## [2.0.1] - 2026-06-22
+
+### Added
+
+#### Specific Screen Identification (MANDATORY)
+- **Figma evaluations** now REQUIRE exact screen references with node-id links
+- **Every finding must include:**
+  - Screen name (frame name from Figma)
+  - Direct Figma link with node-id parameter
+  - Format: `📍 Screen: [Frame Name] | 🔗 [Figma URL with node-id]`
+- **PDF evaluations** must reference page numbers and section names
+- **Image evaluations** must reference filename and describe screen
+- **Limitation warnings** when evaluation is from overview only (cannot read content)
+- **Auto-caps scores** when details are not visible (H2, H9, H10 capped at 2)
+
+**Before (v2.0):**
+```
+❌ "Forms appear too dense with multiple fields"
+```
+
+**After (v2.1):**
+```
+✅ "Forms appear too dense with multiple fields
+📍 Screen: Business Details Form | 🔗 https://figma.com/design/ABC?node-id=123-456
+📍 Screen: Owner Information | 🔗 https://figma.com/design/ABC?node-id=123-789"
+```
+
+**Impact:**
+- Findings are now actionable with exact screen locations
+- Designers can navigate directly to problem areas
+- No more "where is this issue?" confusion
+- Clear distinction between detailed vs overview-only evaluations
+
+### Changed
+
+#### Evaluation Methodology
+- **Figma workflows** now use `get_metadata` + `get_screenshot` for individual screens
+- **Overview evaluations** are clearly marked as high-level only
+- **Content quality scores** require readable content (not 68k-wide overviews)
+- **Recommendations** specify screen links for every affected screen
+
+#### Output Format Updates
+- All findings now include `📍 Screen:` and `🔗` sections
+- Multi-screen issues list all affected screens with links
+- Limitation warnings explain when scores are capped due to lack of detail
+
+### Fixed
+- Vague findings without specific screen references
+- Generic recommendations that don't pinpoint exact locations
+- Confusion about which screens have which issues
+- Inability to navigate from finding to actual design
+
+---
+
 ## [2.0.0] - 2026-06-22
 
 ### ⚠️ BREAKING CHANGES
