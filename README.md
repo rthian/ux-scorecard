@@ -684,4 +684,4 @@ If you find this skill useful, please star the repository to help others discove
 
 ---
 
-**Made with ❤️ by the Regional Design Team** | [View on GitHub](https://github.com/YOUR-ORG/uxscorecard)
+**Made with ❤️ by Rthian** | [View on GitHub](https://github.com/YOUR-ORG/uxscorecard)
