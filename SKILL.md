@@ -309,6 +309,360 @@ Check every visible piece of text for:
 | Good but unpolished | H2 -0.5 |
 | Excellent | Can boost scores +0.5 |
 
+### Copywriting, Typography & CTA Best Practices (MANDATORY)
+
+**CRITICAL: Evaluate every screen for copywriting quality, typography consistency, and CTA hierarchy.**
+
+These are STRICT RULES that apply to ALL screens:
+
+#### 1. Copywriting Length & Readability
+
+**Headers/Titles:**
+- **Mobile:** Maximum 1 line (preferred), 2 lines absolute max
+- **Desktop:** Maximum 1-2 lines
+- **Character limit:** ~40-60 characters for mobile headers
+- **Penalty:** -1 point on H2 (Simplicity) per violation
+
+**Body Copy:**
+- **Mobile:** 2-3 lines maximum per paragraph
+- **Desktop:** 3-4 lines maximum per paragraph
+- **Keep it scannable:** Short sentences (15-20 words max)
+- **Penalty:** -0.5 point on H2 per screen with excessive text
+
+**Instructions/Helper Text:**
+- **1-2 sentences maximum**
+- **Plain language only**
+- **No jargon without tooltips**
+- **Penalty:** -1 point on H9 (Easy-to-Learn) if too verbose
+
+**Red Flags:**
+- 🚨 **Header >2 lines** → H2 -1 (cognitive overload)
+- 🚨 **Body text >5 lines** → H2 -1 (wall of text)
+- 🚨 **Instructions >3 sentences** → H9 -1 (too complex)
+- 🚨 **Any text >50 words** on mobile → H2 -2 (CRITICAL)
+
+**Example Violations:**
+
+❌ **BAD Header (3 lines):**
+```
+"Power up your biz
+with easy financing
+and flexi repayments"
+```
+→ 3 lines, ~60 characters = **H2 -1**
+
+✅ **GOOD Header (1 line):**
+```
+"Get financing in minutes"
+```
+→ 1 line, ~25 characters = PASS
+
+❌ **BAD Instructions (too long):**
+```
+"This is the number we got from Singpass. 
+Please ensure that it is the same number 
+as the one you've provided earlier. If you 
+need to change it, please go back to the 
+previous screen and update your details."
+```
+→ 5 sentences, ~50 words = **H9 -1**
+
+✅ **GOOD Instructions (concise):**
+```
+"Confirm your mobile number from Singpass.
+Tap 'Back' to change it."
+```
+→ 2 sentences, ~12 words = PASS
+
+---
+
+#### 2. Typography Consistency
+
+**Font Size Hierarchy (Mobile):**
+- **H1 (Page Title):** 28-34pt (consistent across ALL screens)
+- **H2 (Section Title):** 22-24pt (consistent across ALL screens)
+- **Body:** 16-18pt (consistent across ALL screens)
+- **Caption/Helper:** 14-15pt (consistent across ALL screens)
+- **CTA Button:** 16-18pt (consistent across ALL buttons)
+
+**Consistency Rules:**
+- **Same hierarchy level = same font size**
+- **All page titles must be the same size**
+- **All body text must be the same size**
+- **No random size variations**
+
+**Penalty:**
+- **Inconsistent title sizes** → H2 -1 per occurrence
+- **Inconsistent body sizes** → H2 -0.5 per occurrence
+- **More than 3 font sizes on one screen** → H2 -1 (hierarchy confusion)
+
+**Red Flags:**
+- 🚨 **Title 28pt on Screen A, 24pt on Screen B** → H2 -1 (INCONSISTENT)
+- 🚨 **Body 16pt in one paragraph, 18pt in another** → H2 -0.5 (INCONSISTENT)
+- 🚨 **Button text 16pt on primary, 14pt on secondary** → H2 -0.5 (INCONSISTENT)
+
+**How to Check:**
+1. Compare same element type across multiple screens
+2. Verify title sizes are identical
+3. Verify body text sizes are identical
+4. Check button text sizes are identical
+
+**Example Violations:**
+
+❌ **BAD (Inconsistent Titles):**
+```
+Screen A Title: "You've taken the first step!" (28pt)
+Screen B Title: "Power up your biz" (24pt)
+```
+→ Inconsistent = **H2 -1**
+
+✅ **GOOD (Consistent Titles):**
+```
+Screen A Title: "You've taken the first step!" (28pt)
+Screen B Title: "Power up your biz" (28pt)
+```
+→ Consistent = PASS
+
+---
+
+#### 3. CTA Hierarchy & Button Rules
+
+**PRIMARY CTA RULE:**
+- **One (1) primary CTA per screen** (STRICT)
+- **Visual style:** Filled button, high contrast (e.g., purple, blue)
+- **Placement:** Bottom of screen (sticky footer) OR prominent position
+- **Text:** Action-oriented (e.g., "Sign Up Now", "Continue", "Submit")
+
+**SECONDARY CTA RULE:**
+- **Zero (0) or One (1) secondary CTA per screen**
+- **Visual style:** Ghost/outline button, lower contrast
+- **Placement:** Above or beside primary (if present)
+- **Text:** Alternative action (e.g., "Login", "Skip", "Back")
+
+**TERTIARY ACTION RULE:**
+- **Text link only** (not a button)
+- **Use for:** "Learn more", "Terms & Conditions", "Need help?"
+
+**Penalty:**
+- **2 primary CTAs on one screen** → H2 -2 (CRITICAL - confusing)
+- **3+ CTAs (any type) on one screen** → H2 -1 (cognitive overload)
+- **CTA text unclear** (e.g., "Submit", "OK") → H9 -1 (not action-oriented)
+
+**Red Flags:**
+- 🚨 **2 filled buttons** → H2 -2 (CRITICAL - which is primary?)
+- 🚨 **Primary CTA not obvious** → H2 -1 (poor hierarchy)
+- 🚨 **CTA text >3 words** → H9 -0.5 (too verbose)
+- 🚨 **CTA text vague** ("Continue", "Next" without context) → H9 -0.5
+
+**Example Violations:**
+
+❌ **BAD (2 Primary CTAs):**
+```
+[Sign Up Now] ← Filled purple button
+[Login]       ← Filled purple button
+```
+→ 2 primary CTAs = **H2 -2 (CRITICAL)**
+
+✅ **GOOD (1 Primary + 1 Secondary):**
+```
+[Sign Up Now] ← Filled purple button (primary)
+[Login]       ← Ghost/outline button (secondary)
+```
+→ Clear hierarchy = PASS
+
+❌ **BAD (Vague CTA):**
+```
+[Submit]  ← What am I submitting?
+```
+→ Unclear action = **H9 -1**
+
+✅ **GOOD (Clear CTA):**
+```
+[Sign Up With Singpass]  ← Clear action
+```
+→ Clear action = PASS
+
+---
+
+#### 4. Platform-Specific Typography Rules
+
+**iOS/Mobile:**
+- **Line height:** 1.3-1.5x font size (no cramped text)
+- **Text alignment:** Left-aligned (never center body text)
+- **Headers:** Can be center or left-aligned (consistent)
+- **Max characters per line:** 50-60 for readability
+
+**Desktop/Web:**
+- **Line height:** 1.5-1.6x font size
+- **Max characters per line:** 60-80 for readability
+- **Paragraph spacing:** 1.5x line height
+
+---
+
+#### 5. Scoring Impact Summary
+
+| Issue | Impact | Penalty |
+|-------|--------|---------|
+| Header >2 lines | H2 (Simplicity) | -1 per violation |
+| Body text >5 lines | H2 (Simplicity) | -1 per screen |
+| Instructions >3 sentences | H9 (Easy-to-Learn) | -1 per screen |
+| Inconsistent font sizes | H2 (Simplicity) | -1 per hierarchy level |
+| 2 primary CTAs | H2 (Simplicity) | -2 (CRITICAL) |
+| 3+ CTAs total | H2 (Simplicity) | -1 (overload) |
+| Vague CTA text | H9 (Easy-to-Learn) | -1 per CTA |
+| Text >50 words on mobile | H2 (Simplicity) | -2 (CRITICAL) |
+
+---
+
+#### 6. Evaluation Checklist
+
+For EVERY screen, check:
+
+**Copywriting:**
+- [ ] Header is 1-2 lines maximum
+- [ ] Body text is 2-3 lines per paragraph max
+- [ ] Instructions are 1-2 sentences maximum
+- [ ] No single text block >50 words
+- [ ] No jargon without tooltips
+- [ ] Tone is appropriate (encouraging, not cold)
+
+**Typography:**
+- [ ] All page titles are the same font size
+- [ ] All body text is the same font size
+- [ ] All button text is the same font size
+- [ ] Font hierarchy has max 4 levels (H1, H2, Body, Caption)
+- [ ] Line height is sufficient (not cramped)
+- [ ] Text is left-aligned (body) or consistent (headers)
+
+**CTA Hierarchy:**
+- [ ] **Only 1 primary CTA** (filled button)
+- [ ] 0-1 secondary CTA (ghost/outline button)
+- [ ] Tertiary actions are text links (not buttons)
+- [ ] CTA text is action-oriented (not vague)
+- [ ] CTA text is <3 words
+- [ ] Primary CTA is visually obvious
+
+---
+
+#### 7. Examples from MSME Onboarding (Reference)
+
+**Screen Analysis:**
+
+📍 **Screen: Mobile Number Confirmation** | 🔗 node-id=31657-42640
+
+**Copywriting Issues:**
+- ❌ Instructions too long (3 sentences, ~30 words)
+- "This is the number we got from Singpass. Please ensure that it is the same number as the one you've provided earlier."
+- **Penalty:** H9 -0.5 (should be 1-2 sentences)
+
+**Better Version:**
+- ✅ "Confirm your mobile number from Singpass. Tap 'Back' to change it."
+- 2 sentences, ~12 words = PASS
+
+---
+
+📍 **Screen: Singpass Sign Up** | 🔗 node-id=21891-24876
+
+**Copywriting Issues:**
+- ❌ Title is 2 lines: "You've taken the first step! Apply in minutes with Singpass."
+- **Penalty:** H2 -0.5 (should be 1 line)
+
+**Better Version:**
+- ✅ "Apply in minutes with Singpass"
+- 1 line, ~30 characters = PASS
+
+**Typography Issues:**
+- ⚠️ Cannot verify if title font size is consistent with other screens
+- **Need to check:** Compare with other screen titles
+
+---
+
+📍 **Screen: Landing Page** | 🔗 node-id=26540-24978
+
+**Copywriting Issues:**
+- 🚨 Title is **3 lines**: "Power up your biz with easy financing and flexi repayments"
+- **Penalty:** H2 -1 (CRITICAL - should be 1-2 lines max)
+
+**Better Version:**
+- ✅ "Get financing in minutes"
+- 1 line, ~25 characters = PASS
+
+**CTA Issues:**
+- 🚨 **2 CTAs present:**
+  - "Sign Up Now" (primary, filled)
+  - "Login" (secondary, but also visually prominent)
+- ⚠️ If "Login" is also a filled button → H2 -2 (CRITICAL)
+- ✅ If "Login" is ghost/outline → PASS
+
+**Typography Issues:**
+- ⚠️ Need to verify title font size consistency
+- ⚠️ Need to verify if "Power up your biz..." uses same size as other titles
+
+---
+
+### How to Report Copywriting/Typography Issues
+
+**Format for findings:**
+
+```markdown
+### 🚨 H2: Simplicity & Clarity - COPYWRITING VIOLATION
+
+**Issue:** Header exceeds 2 lines maximum
+
+**Affected Screens:**
+📍 Landing Page | 🔗 https://www.figma.com/design/ABC?node-id=26540-24978
+- Current: "Power up your biz with easy financing and flexi repayments" (3 lines)
+- Recommendation: "Get financing in minutes" (1 line)
+
+**Impact:** Cognitive overload, poor scannability, user confusion
+
+**Penalty:** H2 -1 point
+
+**Priority:** 🔴 HIGH
+```
+
+```markdown
+### 🚨 H2: Simplicity & Clarity - CTA HIERARCHY VIOLATION
+
+**Issue:** 2 primary CTAs on one screen (violates 1-CTA rule)
+
+**Affected Screens:**
+📍 Landing Page | 🔗 https://www.figma.com/design/ABC?node-id=26540-24978
+- "Sign Up Now" (filled button)
+- "Login" (filled button)
+
+**Impact:** User confusion about primary action, poor visual hierarchy
+
+**Recommendation:**
+- Keep "Sign Up Now" as primary (filled purple)
+- Change "Login" to secondary (ghost/outline)
+
+**Penalty:** H2 -2 points (CRITICAL)
+
+**Priority:** 🔴 CRITICAL - Fix immediately
+```
+
+---
+
+### Auto-Deductions for Copywriting/Typography
+
+Add these automatic deductions when scoring:
+
+| Violation | Auto-Deduct | From Heuristic |
+|-----------|-------------|----------------|
+| Header >2 lines | -1 | H2 |
+| Body text >5 lines | -1 | H2 |
+| Instructions >3 sentences | -1 | H9 |
+| Text >50 words on mobile | -2 | H2 |
+| Inconsistent title sizes | -1 | H2 |
+| Inconsistent body sizes | -0.5 | H2 |
+| 2 primary CTAs | -2 | H2 |
+| 3+ CTAs total | -1 | H2 |
+| Vague CTA text | -1 | H9 |
+| CTA text >3 words | -0.5 | H9 |
+
+**Apply these deductions BEFORE calculating final heuristic scores.**
+
 ### Accessibility Quick Check (MANDATORY)
 
 Even without interactive prototype, check for visual accessibility signals:
