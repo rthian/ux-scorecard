@@ -16,8 +16,8 @@ A comprehensive design evaluation skill using the **UX Heuristics framework** fo
 ### Installation
 
 ```bash
-# Link the skill (recommended - auto-updates)
-ln -s /path/to/uxscorecard/SKILL.md ~/.claude/skills/ux-scorecard.md
+mkdir -p ~/.claude/skills/ux-scorecard
+ln -sf ~/Downloads/ux-scorecard/SKILL.md ~/.claude/skills/ux-scorecard/SKILL.md
 ```
 
 ### Common Usage Examples
